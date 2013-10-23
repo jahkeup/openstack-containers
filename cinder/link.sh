@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 service=cinder
 for f in cinder.conf api-paste.ini; do
   rm /etc/$service/$f
