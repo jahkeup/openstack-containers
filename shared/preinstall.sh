@@ -2,6 +2,10 @@
 # This script prepares a common openstack env for isolate services
 # This script is meant for use with Dockerfile and images.
 
+# Install and configure SSH
+apt-get install -y openssh-server
+sed -i 's/session    required     pam_loginuid.so/#session    required     pam_loginuid.so/' /etc/pam.d/sshd
+
 # Create groups
 groupadd -g 220 keystone
 groupadd -g 223 cinder
