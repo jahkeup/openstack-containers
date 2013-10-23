@@ -10,5 +10,5 @@ RUN /srv/scripts/cinder-prep
 # And set default to run only when .salted (from bound dir) is
 # present.
 ADD ./link.sh /srv/scripts/link-config
-ENTRYPOINT /srv/scripts/link-config &&
+ENTRYPOINT /srv/scripts/link-config
 CMD file /srv/c/.salted && supervisord
