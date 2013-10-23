@@ -6,4 +6,4 @@ RUN apt-get install -y keystone
 ADD ./supervisord.conf /etc/supervisord.conf
 # Start service on run
 # This requires that the bind be made with -v /srv/etc/keystone:/etc/keystone:ro
-ENTRYPOINT file /etc/keystone/.salted && supervisord
+CMD file /etc/keystone/.salted && supervisord
