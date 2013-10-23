@@ -7,7 +7,9 @@ ADD ./supervisord.conf /etc/supervisord.conf
 # Prepare environment
 ADD ./prep.sh /srv/scripts/cinder-prep
 RUN /srv/scripts/cinder-prep
-# And set default to run only when .salted (from bound dir) is
-# present.
+# Setup links for config files
 ADD ./link.sh /srv/scripts/link-config
-CMD /srv/scripts/link-config && file /srv/c/.salted && supervisord
+RUN /src/scripts/link-config
+
+CMD file /srv/c/cinder.conf && supervisord
+# docker run -d -p 9191:9191 -p 9292:9292 -v /srv/c/cinder:/srv/c/cinder controller/cinder
