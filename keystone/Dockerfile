@@ -1,4 +1,4 @@
-FROM jahkeup/ubuntu:saucy
+FROM controller
 MAINTAINER Jacob Vallejo "you@jahkeup.com"
 
 RUN apt-get install -y keystone
