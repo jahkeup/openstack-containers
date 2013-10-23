@@ -6,4 +6,4 @@ done
 
 echo "PRERUN: Linked and/or verified links to real config files."
 
-$@
+exec $@
