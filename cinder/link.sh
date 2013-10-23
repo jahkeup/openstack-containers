@@ -6,5 +6,3 @@ for f in cinder.conf api-paste.ini; do
 done
 
 echo "PRERUN: Linked and/or verified links to real config files."
-
-exec $@
