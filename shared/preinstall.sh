@@ -10,7 +10,7 @@ mkdir /var/run/sshd
 
 # Add remote user
 useradd cloud
-echo "cloud:$6$U86BQCL6$LvddtUv9QmHv1jL46ahX4nemvJngX3GL1ythPgdBKVvwtAJK/nS8bvflvQ.zf0JaljgWp1JHu1.BzQcD9Nq3p1" | chpasswd -e
+echo 'cloud:$6$U86BQCL6$LvddtUv9QmHv1jL46ahX4nemvJngX3GL1ythPgdBKVvwtAJK/nS8bvflvQ.zf0JaljgWp1JHu1.BzQcD9Nq3p1'g | chpasswd -e
 echo "cloud    ALL=NOPASSWD: ALL" >> /etc/sudoers.d/cloud_user
 
 # Create groups
