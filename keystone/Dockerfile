@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y keystone
 ADD ./supervisord.conf /etc/supervisord.conf
 
 # BEGIN CONFIG
-ADD /srv/c/keystone/keystone.conf /etc/keystone/keystone.conf
+ADD /srv/container/keystone/keystone.conf /etc/keystone/keystone.conf
+ADD /srv/container/keystone/keystonerc /home/cloud/openrc
 
 # END CONFIG
 
