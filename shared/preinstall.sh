@@ -9,7 +9,7 @@ mkdir /var/run/sshd
 
 
 # Add remote user
-useradd cloud
+useradd cloud -m -s /bin/bash
 echo 'cloud:$6$I0AFz22S$.8ffn3MMC43/2RvCABYIO5IEBscA0tO2R3JYPStYOoOC6pfIRS1ybpT0ReGrv6y1pzDY9b/lO.jjf08SrsU0f1' | chpasswd -e
 echo "cloud    ALL=NOPASSWD: ALL" >> /etc/sudoers.d/cloud_user
 
