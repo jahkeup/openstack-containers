@@ -9,7 +9,7 @@ sed -i 's/session    required     pam_loginuid.so/#session    required     pam_l
 
 # Add remote user
 useradd cloud
-RUN echo "cloud:$1$ren.WQsK$qagdprCRfiAcx7ZRjEryp/" | chpasswd -e
+echo "cloud:$1$ren.WQsK$qagdprCRfiAcx7ZRjEryp/" | chpasswd -e
 echo "cloud    ALL=NOPASSWD: ALL" >> /etc/sudoers.d/cloud_user
 
 # Create groups
