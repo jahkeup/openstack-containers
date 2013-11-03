@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script prepares a common openstack env for isolate services
+# This script prepares a common openstack env for isolated services
 # This script is meant for use with Dockerfile and images.
 
 # Install and configure SSH
@@ -10,7 +10,7 @@ mkdir /var/run/sshd
 
 # Add remote user
 useradd cloud
-echo 'cloud:$6$U86BQCL6$LvddtUv9QmHv1jL46ahX4nemvJngX3GL1ythPgdBKVvwtAJK/nS8bvflvQ.zf0JaljgWp1JHu1.BzQcD9Nq3p1'g | chpasswd -e
+echo 'cloud:$6$I0AFz22S$.8ffn3MMC43/2RvCABYIO5IEBscA0tO2R3JYPStYOoOC6pfIRS1ybpT0ReGrv6y1pzDY9b/lO.jjf08SrsU0f1' | chpasswd -e
 echo "cloud    ALL=NOPASSWD: ALL" >> /etc/sudoers.d/cloud_user
 
 # Create groups
