@@ -5,6 +5,7 @@
 # Install and configure SSH
 apt-get install -y openssh-server sudo
 sed -i 's/session    required     pam_loginuid.so/#session    required     pam_loginuid.so/' /etc/pam.d/sshd
+mkdir /var/run/sshd
 
 
 # Add remote user
