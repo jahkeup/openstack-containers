@@ -1,6 +1,6 @@
 FROM controller
 MAINTAINER Jacob Vallejo "you@jahkeup.com"
-RUN apt-get update && apt-get install -y keystone
+RUN apt-get update && apt-get install -y keystone python-mysqldb
 
 # Running services:
 ADD supervisord.conf /etc/supervisord.conf
