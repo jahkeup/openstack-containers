@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker run -d -p 9191:9191 -p 9292:9292 -v /srv/c/cinder:/srv/c/cinder controller/cinder
+docker run -d -p 9191:9191 -p 9292:9292 controller/cinder
