@@ -14,5 +14,4 @@ EXPOSE 5000
 RUN /srv/cleanup.sh
 
 # Start service on default run, run with a -l to get an admin prompt.
-ENTRYPOINT /bin/bash
 CMD supervisord
