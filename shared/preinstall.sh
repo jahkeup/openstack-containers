@@ -3,7 +3,7 @@
 # This script is meant for use with Dockerfile and images.
 
 # Install and configure SSH
-apt-get install -y openssh-server sudo traceroute dnsutils less vim
+apt-get install -y openssh-server sudo traceroute dnsutils less vim python-pip
 
 # Make sshd login behave properly
 sed -i 's/session    required     pam_loginuid.so/#session    required     pam_loginuid.so/' /etc/pam.d/sshd
