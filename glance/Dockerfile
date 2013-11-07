@@ -7,7 +7,7 @@ ADD supervisord.conf /etc/supervisord.conf
 # glance Config
 ADD conf/ /etc/glance
 # Ceph config that is necessary.
-ADD ../ceph/conf /etc/ceph
+ADD ceph/ /etc/ceph
 EXPOSE 9292
 EXPOSE 9191
 
