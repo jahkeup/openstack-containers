@@ -9,6 +9,7 @@ ADD supervisord.conf /etc/supervisord.conf
 ADD conf/rabbit_passwords.txt /srv/rabbit_passwords.txt
 ADD configure_users.sh /srv/configure_users.sh
 RUN /srv/configure_users.sh
+EXPOSE 5672
 
 # Always run the cleanup script 
 RUN /srv/cleanup.sh
