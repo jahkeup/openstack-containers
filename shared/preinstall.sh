@@ -2,8 +2,9 @@
 # This script prepares a common openstack env for isolated services
 # This script is meant for use with Dockerfile and images.
 
-# Install and configure SSH
+# Install and configure SSH + Common Deps
 apt-get install -y openssh-server sudo traceroute dnsutils less vim python-pip
+apt-get install -y python-MySQLdb
 
 # Make sshd login behave properly
 sed -i 's/session    required     pam_loginuid.so/#session    required     pam_loginuid.so/' /etc/pam.d/sshd
