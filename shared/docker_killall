@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+if [ `id -u` -ne 0 ]; then
+    echo "Only root may run this."
+    exit 1
+fi
+echo "Killing all running docker images (stop services first if you need to..)"
+sleep 1
+docker ps | grep -v IMAGE | awk '{print $1}' | xargs docker kill
