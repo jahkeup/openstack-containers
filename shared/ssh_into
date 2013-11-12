@@ -7,12 +7,15 @@
 # port, and then ssh's into it via localhost.
 # 
 
-if [ $# -lt 2 ]; then
+if [ $# -lt 1 ]; then
     echo "Provide the service you want to login to."
+    echo "USAGE: $0 service_name"
+    echo "note: this will log into the first container it finds running."
     exit 1
 fi
 
+
 user=cloud
-port=$(docker ps | grep $1 | perl -wlne 'print $1 if /(\d+)(?=->22)/')
+port=$(docker ps | grep -vi ghost | grep $1 | perl -wlne 'print $1 if /(\d+)(?=->22)/')
 
 ssh $user@localhost -p $port
