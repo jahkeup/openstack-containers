@@ -3,8 +3,8 @@
 # This script is meant for use with Dockerfile and images.
 
 # Install and configure SSH + Common Deps
-apt-get install -y openssh-server sudo traceroute dnsutils less vim net-tools
-apt-get install -y python-MySQLdb python-pip
+apt-get install -y openssh-server sudo traceroute dnsutils less vim net-tools \
+                   python-MySQLdb python-pip telnet
 
 # Make sshd login behave properly
 sed -i 's/session    required     pam_loginuid.so/#session    required     pam_loginuid.so/' /etc/pam.d/sshd
