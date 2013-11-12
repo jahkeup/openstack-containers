@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#
+# Jacob Vallejo
+# November 2013
+#
+# Login to docker image with 22 exposed to random port, this grabs the
+# port, and then ssh's into it via localhost.
+# 
+
+if [ $# -lt 2 ]; then
+    echo "Provide the service you want to login to."
+    exit 1
+fi
+
+user=cloud
+port=$(docker ps | grep $1 | perl -wlne 'print $1 if /(\d+)(?=->22)/')
+
+ssh $user@localhost -p $port
