@@ -1,6 +1,6 @@
 FROM controller
 MAINTAINER Jacob Vallejo "you@jahkeup.com"
-RUN apt-get install rabbitmq-server
+RUN apt-get update && apt-get install rabbitmq-server
 
 # Add services to be run
 ADD supervisord.conf /etc/supervisord.conf
